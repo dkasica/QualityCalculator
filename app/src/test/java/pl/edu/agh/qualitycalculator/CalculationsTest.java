@@ -19,6 +19,21 @@ public class CalculationsTest {
         assertEquals(5, calculationsUnderTest.calculate(Operation.SUM, 2, 3), 0.01);
     }
 
+    @Test
+    public void testSubtract() throws Exception {
+        assertEquals(1, calculationsUnderTest.calculate(Operation.SUBTRACT, 3, 2), 0.01);
+    }
+
+    @Test
+    public void testDivide() throws Exception {
+        assertEquals(1.5, calculationsUnderTest.calculate(Operation.DIVIDE, 3, 2), 0.01);
+    }
+    
+    @Test
+    public void testMultiply() throws Exception {
+        assertEquals(6, calculationsUnderTest.calculate(Operation.MULTIPLY, 2, 3), 0.01);
+    }
+    
     @After
     public void tearDown() {
     }
