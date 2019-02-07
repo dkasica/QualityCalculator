@@ -33,6 +33,11 @@ public class CalculationsTest {
     public void testMultiply() throws Exception {
         assertEquals(6, calculationsUnderTest.calculate(Operation.MULTIPLY, 2, 3), 0.01);
     }
+
+    @Test
+    public void testAverage() {
+        assertEquals(3, calculationsUnderTest.calculate(4, 2, 3), 0.01);
+    }
     
     @After
     public void tearDown() {

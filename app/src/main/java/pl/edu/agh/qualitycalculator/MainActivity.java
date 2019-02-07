@@ -14,11 +14,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     EditText etNum1;
     EditText etNum2;
+    EditText etNum3;
 
     Button btnAdd;
     Button btnSub;
     Button btnMult;
     Button btnDiv;
+    Button btnAverage;
 
     TextView tvResult;
 
@@ -32,11 +34,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         etNum1 = (EditText) findViewById(R.id.etNum1);
         etNum2 = (EditText) findViewById(R.id.etNum2);
+        etNum3 = (EditText) findViewById(R.id.etNum3);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSub = (Button) findViewById(R.id.btnSub);
         btnMult = (Button) findViewById(R.id.btnMult);
         btnDiv = (Button) findViewById(R.id.btnDiv);
+        btnAverage = (Button) findViewById(R.id.btnAverage);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
 
@@ -83,5 +87,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
             tvResult.setText("An error ocurred: " + ex.toString());
         };
 
+    }
+
+    public void average(View view) {
+        float num1 = Float.parseFloat(etNum1.getText().toString());
+        float num2 = Float.parseFloat(etNum2.getText().toString());
+        float num3 = Float.parseFloat(etNum3.getText().toString());
+
+        if (TextUtils.isEmpty(etNum1.getText().toString())
+                || TextUtils.isEmpty(etNum2.getText().toString())
+                || TextUtils.isEmpty(etNum3.getText().toString())) {
+            tvResult.setText("Fill all three fields to calculate");
+        } else {
+            float result = calculations.calculate(num1, num2, num3);
+            tvResult.setText("Average of " + num1 + ", " + num2 + " and " + num3 + " equals " + result);
+        }
     }
 }

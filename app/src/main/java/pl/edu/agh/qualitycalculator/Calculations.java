@@ -16,6 +16,10 @@ public class Calculations {
         }
     }
 
+    public float calculate(float operand1, float operand2, float operand3){
+        return ((operand1 + operand2 + operand3)/3);
+    }
+
     private float sum(float operand1, float operand2) {
         return operand1 + operand2;
     }

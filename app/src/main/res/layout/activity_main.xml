@@ -68,14 +68,28 @@
             android:id="@+id/btnDiv">
         </Button>
     </LinearLayout>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="5pt"
-        android:layout_marginRight="5pt"
-        android:textSize="8pt"
-        android:layout_marginTop="3pt"
         android:id="@+id/tvResult"
-        android:gravity="center_horizontal">
-    </TextView>
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5pt"
+        android:layout_marginTop="3pt"
+        android:layout_marginRight="5pt"
+        android:gravity="center_horizontal"
+        android:textSize="8pt"></TextView>
+
+    <EditText
+        android:id="@+id/etNum3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnAverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Average"
+        android:onClick="average"/>
 </LinearLayout>
