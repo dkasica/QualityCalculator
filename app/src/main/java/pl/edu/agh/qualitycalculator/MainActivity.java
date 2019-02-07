@@ -90,15 +90,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     public void average(View view) {
-        float num1 = Float.parseFloat(etNum1.getText().toString());
-        float num2 = Float.parseFloat(etNum2.getText().toString());
-        float num3 = Float.parseFloat(etNum3.getText().toString());
 
         if (TextUtils.isEmpty(etNum1.getText().toString())
                 || TextUtils.isEmpty(etNum2.getText().toString())
                 || TextUtils.isEmpty(etNum3.getText().toString())) {
             tvResult.setText("Fill all three fields to calculate");
         } else {
+            float num1 = Float.parseFloat(etNum1.getText().toString());
+            float num2 = Float.parseFloat(etNum2.getText().toString());
+            float num3 = Float.parseFloat(etNum3.getText().toString());
+
             float result = calculations.calculate(num1, num2, num3);
             tvResult.setText("Average of " + num1 + ", " + num2 + " and " + num3 + " equals " + result);
         }
